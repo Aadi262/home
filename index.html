@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Left Panel Example</title>
+  <style>
+    /* CSS for left panel */
+    .left-panel {
+      float: left;
+      width: 20%;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    /* CSS for content section */
+    .content {
+      float: left;
+      width: 80%;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    // JavaScript to handle component clicks
+    function showContent(component) {
+      var content = document.getElementById('content');
+      switch(component) {
+        case 'home':
+          content.innerHTML = '<h2>Welcome to the Home Page</h2><p>This is the home page content.</p>';
+          break;
+        case 'contact':
+          content.innerHTML = '<h2>Contact Information</h2><p>Here is the contact information.</p>';
+          break;
+        case 'information':
+          content.innerHTML = '<h2>Information</h2><p>This is some information.</p>';
+          break;
+        case 'guide':
+          content.innerHTML = '<h2>Guide</h2><p>Here is the guide content.</p>';
+          break;
+        default:
+          content.innerHTML = '<h2>Welcome to the Home Page</h2><p>This is the home page content.</p>';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="left-panel">
+    <!-- Left panel components -->
+    <ul>
+      <li><a href="#" onclick="showContent('home')">Home</a></li>
+      <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+      <li><a href="#" onclick="showContent('information')">Information</a></li>
+      <li><a href="#" onclick="showContent('guide')">Guide</a></li>
+    </ul>
+  </div>
+
+  <div class="content" id="content">
+    <!-- Default content -->
+    <h2>Welcome to the Home Page</h2>
+    <p>This is the home page content.</p>
+  </div>
+</body>
+</html>
